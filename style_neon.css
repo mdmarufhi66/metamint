@@ -55,11 +55,10 @@ img {
  vertical-align: middle;
 }
 .inline-icon {
- /* Increased size for inline icons */
- width: 1.5em; /* Increased from 1em */
- height: 1.5em; /* Increased from 1em */
- margin: 0 0.15em; /* Adjusted margin slightly */
- vertical-align: -0.25em; /* Adjusted vertical alignment */
+ width: 1em;
+ height: 1em;
+ margin: 0 0.1em;
+ vertical-align: -0.15em;
 }
 
 h1, h2, h3, h4 {
@@ -136,8 +135,7 @@ p {
 
 .resource-display { display: flex; align-items: center; gap: 12px; margin-left: auto; }
 .resource-item { display: flex; align-items: center; gap: 5px; font-size: 0.9rem; font-weight: 600; }
-/* Increased size for resource icons in header */
-.resource-item img { width: 24px; height: 24px; } /* Increased from 18px */
+.resource-item img { width: 18px; height: 18px; } /* Reduced */
 .energy-item { position: relative; padding-right: 50px; }
 .energy-bar-bg {
  position: absolute;
@@ -174,8 +172,7 @@ p {
  transition: color 0.2s ease, transform 0.2s ease;
  max-width: 60px;
 }
-/* Increased size for navigation icons */
-.nav-button-neon img { width: 30px; height: 30px; margin-bottom: 4px; opacity: 0.7; transition: opacity 0.2s ease; } /* Increased from 22px */
+.nav-button-neon img { width: 22px; height: 22px; margin-bottom: 4px; opacity: 0.7; transition: opacity 0.2s ease; } /* Reduced */
 .nav-button-neon.active { color: var(--neon-blue); font-weight: 600; }
 .nav-button-neon.active img { opacity: 1; }
 .nav-button-neon:hover { transform: translateY(-2px); }
@@ -197,8 +194,7 @@ p {
 }
 .action-hub-button:hover { transform: scale(1.05); box-shadow: 0 8px 20px rgba(0, 204, 255, 0.5), 0 0 15px var(--neon-pink); }
 .action-hub-button:active { transform: scale(0.95); }
-/* Increased size for action hub icon */
-.action-hub-button img { width: 35px; height: 35px; filter: brightness(1.2); } /* Increased from 26px */
+.action-hub-button img { width: 26px; height: 26px; filter: brightness(1.2); } /* Reduced */
 
 /* --- Generic Components --- */
 .card-neon {
@@ -277,7 +273,7 @@ p {
 }
 .btn-neon:disabled, .btn-claimed-neon {
  background: rgba(128, 149, 192, 0.3);
- color: var(--text-secondary); /* Fixed potential missing variable */
+ color: var antibiotics
  cursor: not-allowed;
  opacity: 0.6;
  border: 1px solid var(--text-secondary);
@@ -299,8 +295,7 @@ p {
  border-radius: 50%;
  transition: background-color 0.2s ease, color 0.2s ease;
 }
-/* Increased size for general icon buttons (like close button) */
-.icon-button img { width: 30px; height: 30px; filter: grayscale(50%) brightness(0.8); transition: filter 0.2s ease;} /* Increased from 22px */
+.icon-button img { width: 22px; height: 22px; filter: grayscale(50%) brightness(0.8); transition: filter 0.2s ease;}
 .icon-button:hover { background-color: rgba(0, 204, 255, 0.1); color: var(--neon-blue); }
 .icon-button:hover img { filter: grayscale(0%) brightness(1); }
 
@@ -367,8 +362,7 @@ p {
  align-items: center;
  gap: 15px;
 }
-/* Increased size for task item icons */
-.task-item img { width: 45px; height: 45px; flex-shrink: 0; } /* Increased from 35px */
+.task-item img { width: 35px; height: 35px; flex-shrink: 0; }
 .task-item .task-info { flex-grow: 1; }
 .task-item .task-info span:first-child { display: block; font-weight: 500; margin-bottom: 4px; }
 .task-item .task-info .reward { font-size: 0.9rem; color: var(--neon-yellow); font-weight: 600; display: flex; align-items: center; gap: 3px; }
@@ -382,10 +376,9 @@ p {
 .task-item.completed .task-info .reward { opacity: 0.7; }
 
 .upgrade-list .upgrade-item { display: flex; align-items: center; gap: 15px; }
-/* Increased size for upgrade item icons */
-.upgrade-item img { width: 60px; height: 60px; } /* Increased from 50px */
+.upgrade-item img { width: 50px; height: 50px; }
 .up grade-item .upgrade-info { flex-grow: 1; }
-.upgrade-item .upgrade-info h4 { font-size: 1rem; margin-bottom: 3px; color: var(--neon-cyan); } /* Assuming var(--neon-cyan) exists or using a similar blue */
+.upgrade-item .upgrade-info h4 { font-size: 1rem; margin-bottom: 3px; color: var(--neon-cyan); }
 .upgrade-item .upgrade-info p { font-size: 0.85rem; margin-bottom: 5px; }
 .upgrade-item .upgrade-info span { font-size: 0.85rem; color: var(--text-secondary); }
 .upgrade-item .upgrade-action { text-align: right; }
@@ -394,8 +387,7 @@ p {
 
 .chest-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
 .chest-item { text-align: center; }
-/* Increased size for chest item icons */
-.chest-item img { width: 90px; height: 90px; margin: 10px auto; } /* Increased from 80px */
+.chest-item img { width: 80px; height: 80px; margin: 10px auto; }
 .chest-item h4 { font-size: 1rem; color: var(--neon-pink); }
 .chest-item p { font-size: 0.85rem; }
 .chest-item .chest-cost { margin: 10px 0; font-size: 0.9rem; font-weight: 600; }
@@ -408,7 +400,7 @@ p {
 .invite-buttons .btn-neon { flex: 1; }
 
 .frens-list .fren-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem;}
-.fren-item img { width: 40px; height: 40px; border-radius: 50%; } /* Avatar size, left unchanged */
+.fren-item img { width: 40px; height: 40px; border-radius: 50%; }
 .fren-item .fren-status { margin-left: auto; font-size: 0.8rem; padding: 3px 8px; border-radius: 10px; }
 .fren-item .fren-status.online { color: var(--neon-green); background: rgba(0, 255, 170, 0.1); }
 .fren-item .fren-status.offline { color: var(--text-secondary); background: rgba(128, 149, 192, 0.1); }
@@ -436,8 +428,7 @@ p {
 .leaderboard-item:nth-child(1) .rank { color: var(--neon-gold); }
 .leaderboard-item:nth-child(2) .rank { color: #c0c0c0; }
 .leaderboard-item:nth-child(3) .rank { color: #cd7f32; }
-/* Increased size for leaderboard item icons (avatars) */
-.leaderboard-item img { width: 50px; height: 50px; border-radius: 50%; } /* Increased from 40px */
+.leaderboard-item img { width: 40px; height: 40px; border-radius: 50%; }
 .leaderboard-item .name { flex-grow: 1; font-weight: 500; }
 .leaderboard-item .score { font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 3px; white-space: nowrap;}
 .leaderboard-item.self { background: rgba(0, 204, 255, 0.1); border-color: var(--neon-blue); }
@@ -447,8 +438,7 @@ p {
 .wallet-overview .total-value { font-size: 1.5rem; font-weight: 700; color: var(--neon-green); display: block; margin-bottom: 15px;}
 .token-summary { display: flex; justify-content: center; gap: 15px; font-size: 0.85rem; }
 .token-summary div { display: flex; align-items: center; gap: 4px; }
-/* Increased size for token summary icons */
-.token-summary img { width: 20px; height: 20px; } /* Increased from 16px */
+.token-summary img { width: 16px; height: 16px; }
 
 #connect-wallet-button-neon { margin: 20px 0 10px 0; }
 .wallet-status-neon { text-align: center; font-size: 0.85rem; margin-bottom: 20px; height: 1.2em;}
@@ -458,8 +448,7 @@ p {
 
 .token-details-list h4 { margin-top: 25px; }
 .token-details-list .token-item { display: flex; align-items: center; gap: 15px; }
-/* Increased size for token details icons */
-.token-item img { width: 45px; height: 45px; } /* Increased from 35px */
+.token-item img { width: 35px; height: 35px; }
 .token-item .token-info { flex-grow: 1; }
 .token-item .token-info span { display: block; font-weight: 500; }
 .token-item .token-info small { font-size: 0.8rem; color: var(--text-secondary); }
@@ -489,12 +478,9 @@ p {
  text-align: center;
  animation: scaleUpNeon 0.3s ease-out;
 }
-/* Increased size for modal close icon */
-.modal-close-neon { position: absolute; top: 15px; right: 15px; font-size: 1.5rem; } /* Adjusted position slightly */
-.modal-close-neon img { width: 28px; height: 28px; filter: grayscale(50%) brightness(0.8); transition: filter 0.2s ease;} /* Increased from 22px */
+.modal-close-neon { position: absolute; top: 10px; right: 10px; font-size: 1.3rem; }
 .modal-content-neon h3 { font-size: 1.3rem; color: var(--text-primary); margin-bottom: 15px; }
 .modal-content-neon p { font-size: 0.95rem; }
-/* Modal main icon is already quite large, leaving unchanged */
 .modal-icon { width: 70px; height: 70px; margin: 15px auto; }
 .modal-reward { font-size: 1.2rem; font-weight: 700; color: var(--neon-gold); margin: 10px 0 20px 0; }
 .modal-actions-neon { display: flex; gap: 15px; margin-top: 20px; }
