@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Neon MetaCore</title>
     <link rel="stylesheet" href="style_neon.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    </head>
+</head>
 <body>
-
     <header class="app-header-neon">
         <div class="profile-snippet">
             <img id="user-avatar-header" src="assets/avatars/avatar_default.png" alt="Avatar" class="header-avatar">
@@ -27,14 +26,9 @@
                 </div>
             </div>
         </div>
-        <button class="icon-button notification-button" aria-label="Notifications">
-            <img src="assets/icons/neon_bell.png" alt="Notifications">
-            <span id="notification-indicator" class="notification-dot" style="display: none;"></span>
-        </button>
     </header>
 
     <main class="main-content-neon">
-
         <section id="page-dashboard" class="page-section-neon active">
             <h2>Dashboard</h2>
             <div class="dashboard-card card-neon glow-blue">
@@ -47,95 +41,88 @@
                 </div>
                 <button id="daily-login-prompt" class="btn-neon btn-secondary-neon" style="margin-top: 15px; display: none;">Claim Daily Bonus!</button>
             </div>
-
-             <div class="activity-feed card-neon">
-                 <h4>Recent Activity</h4>
-                 <ul id="activity-list" class="list-unstyled-neon">
-                     <li class="activity-item placeholder">No recent activity.</li>
-                     </ul>
+            <div class="activity-feed card-neon">
+                <h4>Recent Activity</h4>
+                <ul id="activity-list" class="list-unstyled-neon">
+                    <li class="activity-item placeholder">No recent activity.</li>
+                </ul>
             </div>
         </section>
 
         <section id="page-tasks" class="page-section-neon">
             <h2>Tasks & Achievements</h2>
             <div class="tabs-neon">
-                 <button class="tab-button-neon active" data-tab="quests">Quests</button>
-                 <button class="tab-button-neon" data-tab="achievements">Achievements</button>
+                <button class="tab-button-neon active" data-tab="quests">Quests</button>
+                <button class="tab-button-neon" data-tab="achievements">Achievements</button>
             </div>
-
             <div id="tab-content-quests" class="tab-pane-neon active">
-                 <ul id="quest-list-neon" class="list-unstyled-neon task-list">
+                <ul id="quest-list-neon" class="list-unstyled-neon task-list">
                     <li class="list-item-placeholder-neon">Loading quests...</li>
-                    </ul>
+                </ul>
             </div>
-
             <div id="tab-content-achievements" class="tab-pane-neon">
-                  <ul id="achievement-list-neon" class="list-unstyled-neon task-list">
-                     <li class="list-item-placeholder-neon">Loading achievements...</li>
-                     </ul>
-             </div>
+                <ul id="achievement-list-neon" class="list-unstyled-neon task-list">
+                    <li class="list-item-placeholder-neon">Loading achievements...</li>
+                </ul>
+            </div>
         </section>
 
         <section id="page-boost" class="page-section-neon">
-             <h2>Boost Your Earnings</h2>
-             <div class="tabs-neon">
-                 <button class="tab-button-neon active" data-tab="upgrades">Upgrades</button>
-                 <button class="tab-button-neon" data-tab="chests">Chests</button>
-             </div>
-
-             <div id="tab-content-upgrades" class="tab-pane-neon active">
-                 <p class="section-intro">Spend Gems to permanently increase your potential!</p>
-                 <ul id="upgrade-list-neon" class="list-unstyled-neon upgrade-list">
-                      <li class="list-item-placeholder-neon">Loading upgrades...</li>
-                      </ul>
-             </div>
-
+            <h2>Boost Your Earnings</h2>
+            <div class="tabs-neon">
+                <button class="tab-button-neon active" data-tab="upgrades">Upgrades</button>
+                <button class="tab-button-neon" data-tab="chests">Chests</button>
+            </div>
+            <div id="tab-content-upgrades" class="tab-pane-neon active">
+                <p class="section-intro">Spend Gems to permanently increase your potential!</p>
+                <ul id="upgrade-list-neon" class="list-unstyled-neon upgrade-list">
+                    <li class="list-item-placeholder-neon">Loading upgrades...</li>
+                </ul>
+            </div>
             <div id="tab-content-chests" class="tab-pane-neon">
                 <p class="section-intro">Use energy or gems to open chests for rewards!</p>
-                 <ul id="chest-list-neon" class="list-unstyled-neon chest-list">
-                     <li class="list-item-placeholder-neon">Loading chests...</li>
-                      </ul>
+                <ul id="chest-list-neon" class="list-unstyled-neon chest-list">
+                    <li class="list-item-placeholder-neon">Loading chests...</li>
+                </ul>
             </div>
         </section>
 
         <section id="page-social" class="page-section-neon">
-             <h2>Social Hub</h2>
-              <div class="tabs-neon">
-                 <button class="tab-button-neon active" data-tab="frens">Frens</button>
-                 <button class="tab-button-neon" data-tab="leaderboard">Leaderboard</button>
-             </div>
-
-             <div id="tab-content-frens" class="tab-pane-neon active">
-                 <div class="frens-invite-card card-neon glow-yellow">
-                     <h4>Invite Frens, Earn More!</h4>
-                     <p>You both get bonuses when your frens join and play.</p>
-                     <div class="frens-stats">
-                         <span>Total Frens: <strong id="frens-count-social">0</strong></span>
-                         <span>Bonus Earned: <strong id="frens-bonus-social">0</strong> <img src="assets/icons/neon_gem.png" class="inline-icon"></span>
-                     </div>
-                      <div class="invite-buttons">
-                         <button id="copy-invite-neon" class="btn-neon btn-secondary-neon">Copy Link</button>
-                         <button id="share-invite-neon" class="btn-neon btn-primary-neon">Share Invite</button>
-                     </div>
-                 </div>
-                  <h4>Your Frens List</h4>
-                 <ul id="frens-list-social" class="list-unstyled-neon frens-list">
-                     <li class="list-item-placeholder-neon">No frens invited yet.</li>
-                     </ul>
-             </div>
-
-             <div id="tab-content-leaderboard" class="tab-pane-neon">
-                 <div class="leaderboard-filters">
-                     <select id="leaderboard-type" class="select-neon">
-                         <option value="gems_total">Top Gems (All Time)</option>
-                         <option value="gems_weekly">Top Gems (Weekly)</option>
-                         <option value="frens">Most Frens</option>
-                         <option value="level">Highest Level</option>
-                     </select>
-                 </div>
-                 <ul id="leaderboard-list-neon" class="list-unstyled-neon leaderboard-list">
-                     <li class="list-item-placeholder-neon">Loading leaderboard...</li>
-                     </ul>
+            <h2>Social Hub</h2>
+            <div class="tabs-neon">
+                <button class="tab-button-neon active" data-tab="frens">Frens</button>
+                <button class="tab-button-neon" data-tab="leaderboard">Leaderboard</button>
+            </div>
+            <div id="tab-content-frens" class="tab-pane-neon active">
+                <div class="frens-invite-card card-neon glow-yellow">
+                    <h4>Invite Frens, Earn More!</h4>
+                    <p>You both get bonuses when your frens join and play.</p>
+                    <div class="frens-stats">
+                        <span>Total Frens: <strong id="frens-count-social">0</strong></span>
+                        <span>Bonus Earned: <strong id="frens-bonus-social">0</strong> <img src="assets/icons/neon_gem.png" class="inline-icon"></span>
+                    </div>
+                    <div class="invite-buttons">
+                        <button id="copy-invite-neon" class="btn-neon btn-secondary-neon">Copy Link</button>
+                        <button id="share-invite-neon" class="btn-neon btn-primary-neon">Share Invite</button>
+                    </div>
+                </div>
+                <h4>Your Frens List</h4>
+                <ul id="frens-list-social" class="list-unstyled-neon frens-list">
+                    <li class="list-item-placeholder-neon">No frens invited yet.</li>
+                </ul>
+            </div>
+            <div id="tab-content-leaderboard" class="tab-pane-neon">
+                <div class="leaderboard-filters">
+                    <select id="leaderboard-type" class="select-neon">
+                        <option value="gems_total">Top Gems (All Time)</option>
+                        <option value="gems_weekly">Top Gems (Weekly)</option>
+                        <option value="frens">Most Frens</option>
+                        <option value="level">Highest Level</option>
+                    </select>
+                </div>
+                <ul id="leaderboard-list-neon" class="list-unstyled-neon leaderboard-list">
+                    <li class="list-item-placeholder-neon">Loading leaderboard...</li>
+                </ul>
             </div>
         </section>
 
@@ -143,19 +130,17 @@
             <h2>Wallet</h2>
             <div class="wallet-overview card-neon glow-blue">
                 <h4>Total Assets Value (Est.)</h4>
-                 <span class="total-value" id="wallet-total-usd">~$0.00 USD</span>
+                <span class="total-value" id="wallet-total-usd">~$0.00 USD</span>
                 <div class="token-summary">
-                     <div><img src="assets/icons/neon_gem.png"> <span id="wallet-summary-gems">0</span></div>
-                     <div><img src="assets/icons/neon_usdt.png"> <span id="wallet-summary-usdt">0.00</span></div>
-                     <div><img src="assets/icons/neon_ton.png"> <span id="wallet-summary-ton">0.00</span></div>
+                    <div><img src="assets/icons/neon_gem.png"> <span id="wallet-summary-gems">0</span></div>
+                    <div><img src="assets/icons/neon_usdt.png"> <span id="wallet-summary-usdt">0.00</span></div>
+                    <div><img src="assets/icons/neon_ton.png"> <span id="wallet-summary-ton">0.00</span></div>
                 </div>
             </div>
-
-             <button id="connect-wallet-button-neon" class="btn-neon btn-primary-neon full-width">Connect Wallet</button>
-             <p id="wallet-status-neon" class="wallet-status-neon disconnected">Not Connected</p>
-
+            <button id="connect-wallet-button-neon" class="btn-neon btn-primary-neon full-width">Connect Wallet</button>
+            <p id="wallet-status-neon" class="wallet-status-neon disconnected">Not Connected</p>
             <div class="token-details-list">
-                 <h4>Your Tokens</h4>
+                <h4>Your Tokens</h4>
                 <div class="token-item card-neon">
                     <img src="assets/icons/neon_usdt.png" alt="USDT">
                     <div class="token-info">
@@ -165,7 +150,7 @@
                     <span class="token-balance" id="wallet-detail-usdt">0.0000</span>
                     <button class="btn-neon btn-tertiary-neon withdraw-btn-neon" data-token="usdt" disabled>Withdraw</button>
                 </div>
-                 <div class="token-item card-neon">
+                <div class="token-item card-neon">
                     <img src="assets/icons/neon_ton.png" alt="TON">
                     <div class="token-info">
                         <span>TON</span>
@@ -181,15 +166,14 @@
                         <small>In-Game Currency</small>
                     </div>
                     <span class="token-balance" id="wallet-detail-gems">0</span>
-                     <button class="btn-neon btn-tertiary-neon" disabled>Cannot Withdraw</button> </div>
+                    <button class="btn-neon btn-tertiary-neon" disabled>Cannot Withdraw</button>
+                </div>
             </div>
-
-             <h4>Transaction History</h4>
-             <ul id="transaction-list-neon" class="list-unstyled-neon transaction-list">
-                  <li class="list-item-placeholder-neon">No transactions yet.</li>
-                  </ul>
+            <h4>Transaction History</h4>
+            <ul id="transaction-list-neon" class="list-unstyled-neon transaction-list">
+                <li class="list-item-placeholder-neon">No transactions yet.</li>
+            </ul>
         </section>
-
     </main>
 
     <nav class="bottom-nav-neon">
@@ -203,7 +187,7 @@
         </button>
         <button id="action-hub-button" class="action-hub-button">
             <img src="assets/icons/action_hub.png" alt="Action">
-             </button>
+        </button>
         <button class="nav-button-neon" data-target="page-social">
             <img src="assets/icons/nav_social.png" alt="Social">
             <span>Social</span>
@@ -212,30 +196,30 @@
             <img src="assets/icons/nav_wallet.png" alt="Wallet">
             <span>Wallet</span>
         </button>
-         <button class="nav-button-neon" data-target="page-dashboard" style="display: none;"></button>
+        <button class="nav-button-neon" data-target="page-dashboard" style="display: none;"></button>
     </nav>
 
-     <div id="daily-login-modal" class="modal-neon" style="display: none;">
-         <div class="modal-content-neon card-neon glow-gold">
-             <button class="modal-close-neon icon-button">✕</button>
-             <h3>Daily Login Bonus!</h3>
-             <img src="assets/icons/neon_gift.png" alt="Gift" class="modal-icon">
-             <p>You received:</p>
-             <p class="modal-reward" id="daily-reward-amount">+100 <img src="assets/icons/neon_gem.png" class="inline-icon"></p>
-             <button id="claim-daily-bonus-button" class="btn-neon btn-primary-neon">Claim!</button>
-         </div>
-     </div>
+    <div id="daily-login-modal" class="modal-neon" style="display: none;">
+        <div class="modal-content-neon card-neon glow-gold">
+            <button class="modal-close-neon icon-button">✕</button>
+            <h3>Daily Login Bonus!</h3>
+            <img src="assets/icons/neon_gift.png" alt="Gift" class="modal-icon">
+            <p>You received:</p>
+            <p class="modal-reward" id="daily-reward-amount">+100 <img src="assets/icons/neon_gem.png" class="inline-icon"></p>
+            <button id="claim-daily-bonus-button" class="btn-neon btn-primary-neon">Claim!</button>
+        </div>
+    </div>
 
     <div id="generic-modal" class="modal-neon" style="display: none;">
-         <div class="modal-content-neon card-neon">
-              <button class="modal-close-neon icon-button">✕</button>
-              <h3 id="generic-modal-title">Modal Title</h3>
-              <div id="generic-modal-body">Modal body content...</div>
-              <div id="generic-modal-actions" class="modal-actions-neon">
-                  <button id="generic-modal-cancel" class="btn-neon btn-secondary-neon">Cancel</button>
-                  <button id="generic-modal-confirm" class="btn-neon btn-primary-neon">Confirm</button>
-              </div>
-         </div>
+        <div class="modal-content-neon card-neon">
+            <button class="modal-close-neon icon-button">✕</button>
+            <h3 id="generic-modal-title">Modal Title</h3>
+            <div id="generic-modal-body">Modal body content...</div>
+            <div id="generic-modal-actions" class="modal-actions-neon">
+                <button id="generic-modal-cancel" class="btn-neon btn-secondary-neon">Cancel</button>
+                <button id="generic-modal-confirm" class="btn-neon btn-primary-neon">Confirm</button>
+            </div>
+        </div>
     </div>
 
     <script src="script_neon.js"></script>
