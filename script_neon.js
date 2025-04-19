@@ -1,4 +1,4 @@
-Document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const tg = window.Telegram.WebApp;
 
     // --- Basic Setup & State ---
