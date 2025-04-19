@@ -27,11 +27,7 @@
                 </div>
             </div>
         </div>
-        <button class="icon-button notification-button" aria-label="Notifications">
-            <img src="assets/icons/neon_bell.png" alt="Notifications">
-            <span id="notification-indicator" class="notification-dot" style="display: none;"></span>
-        </button>
-    </header>
+        </header>
 
     <main class="main-content-neon">
 
@@ -43,9 +39,9 @@
                 <div class="quick-stats">
                     <div>Level: <strong id="dash-level">1</strong></div>
                     <div>Frens: <strong id="dash-frens">0</strong></div>
-                    <div>Earnings/hr: <strong id="dash-rate">~10</strong> <img src="assets/icons/neon_gem.png" class="inline-icon" alt="Gems"></div>
+                    <div>Rate: <strong id="dash-rate">~10</strong> <img src="assets/icons/neon_gem.png" class="inline-icon" alt="Gems">/hr</div>
                 </div>
-                <button id="daily-login-prompt" class="btn-neon btn-secondary-neon" style="margin-top: 15px; display: none;">Claim Daily Bonus!</button>
+                <button id="daily-login-prompt" class="btn-neon btn-secondary-neon" style="margin-top: 10px; display: none;">Claim Daily Bonus!</button>
             </div>
 
              <div class="activity-feed card-neon">
@@ -143,7 +139,7 @@
             <h2>Wallet</h2>
             <div class="wallet-overview card-neon glow-blue">
                 <h4>Total Assets Value (Est.)</h4>
-                 <span class="total-value" id="wallet-total-usd">~$0.00 USD</span>
+                <span class="total-value" id="wallet-total-usd">~$0.00 USD</span>
                 <div class="token-summary">
                      <div><img src="assets/icons/neon_gem.png"> <span id="wallet-summary-gems">0</span></div>
                      <div><img src="assets/icons/neon_usdt.png"> <span id="wallet-summary-usdt">0.00</span></div>
@@ -174,20 +170,21 @@
                     <span class="token-balance" id="wallet-detail-ton">0.0000</span>
                     <button class="btn-neon btn-tertiary-neon withdraw-btn-neon" data-token="ton" disabled>Withdraw</button>
                 </div>
-                <div class="token-item card-neon internal">
+                 <div class="token-item card-neon internal">
                     <img src="assets/icons/neon_gem.png" alt="Gems">
                     <div class="token-info">
                         <span>Gems</span>
                         <small>In-Game Currency</small>
                     </div>
                     <span class="token-balance" id="wallet-detail-gems">0</span>
-                     <button class="btn-neon btn-tertiary-neon" disabled>Cannot Withdraw</button> </div>
+                     <button class="btn-neon btn-tertiary-neon" disabled>Cannot Withdraw</button>
+                </div>
             </div>
 
              <h4>Transaction History</h4>
              <ul id="transaction-list-neon" class="list-unstyled-neon transaction-list">
                   <li class="list-item-placeholder-neon">No transactions yet.</li>
-                  </ul>
+             </ul>
         </section>
 
     </main>
@@ -203,7 +200,7 @@
         </button>
         <button id="action-hub-button" class="action-hub-button">
             <img src="assets/icons/action_hub.png" alt="Action">
-             </button>
+        </button>
         <button class="nav-button-neon" data-target="page-social">
             <img src="assets/icons/nav_social.png" alt="Social">
             <span>Social</span>
@@ -218,10 +215,8 @@
      <div id="daily-login-modal" class="modal-neon" style="display: none;">
          <div class="modal-content-neon card-neon glow-gold">
              <button class="modal-close-neon icon-button">✕</button>
-             <h3>Daily Login Bonus!</h3>
-             <img src="assets/icons/neon_gift.png" alt="Gift" class="modal-icon">
-             <p>You received:</p>
-             <p class="modal-reward" id="daily-reward-amount">+100 <img src="assets/icons/neon_gem.png" class="inline-icon"></p>
+             <h3>Daily Bonus!</h3> <img src="assets/icons/neon_gift.png" alt="Gift" class="modal-icon">
+             <p>Today's Reward:</p> <p class="modal-reward" id="daily-reward-amount">+100 <img src="assets/icons/neon_gem.png" class="inline-icon"></p>
              <button id="claim-daily-bonus-button" class="btn-neon btn-primary-neon">Claim!</button>
          </div>
      </div>
